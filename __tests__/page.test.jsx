@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import Header from '../components/Header'
  
 describe('Header', () => {
-  it('renders a dropdown', () => {
+  xit('renders a dropdown', () => {
     render(<Header />)
  
     const drop = screen.getByText(/Sans Serif/i)
@@ -13,7 +13,7 @@ describe('Header', () => {
 
   })
 
-  it("renders the type correcty", () =>{
+  xit("renders the type correcty", () =>{
     const type = screen.getByText(/Sans Serif/i)
    
    

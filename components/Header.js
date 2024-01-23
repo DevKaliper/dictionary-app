@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex  items-center">
           <Dropdown >
             <DropdownTrigger>
-              <Button className="bg-transparent  border-r-1 border-white rounded-none">
+              <Button className="bg-transparent  border-r-1 border-white  rounded-none">
                 <span className="text-right text-[14px] font-bold mr-[10px]" id="type">{type}</span>{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
