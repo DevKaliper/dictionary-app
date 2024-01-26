@@ -1,10 +1,13 @@
+import Content from "@/components/Content"
 import { InputSearch } from "@/components/InputSearch"
 
 const Home = () => {
   return (<>
-    <div>
+    <main>
       <InputSearch/>
-    </div>
+      <Content/>
+     
+    </main>
    </>)
   
 }
