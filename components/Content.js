@@ -1,6 +1,8 @@
-import React from "react";
+
+"use client"
+
 import { NewWindowIcon, PlayIcon } from "./Icons";
-import { word } from "@/Mock/keyboard";
+
 const Viñeta = () => (
   <div className="bg-secondary  min-h-1 min-w-1 redondo relative top-2"> </div>
 );
@@ -9,7 +11,8 @@ const Divider = () => (
   <div className="border-t-1 my-4 w-full border-[#3A3A3A]"></div>
 );
 
-const Content = () => {
+const Content = ({word}) => {
+
   return (
     <section className="my-7">
       <div
@@ -85,7 +88,7 @@ const Content = () => {
           Source
         </span>
         <span className=" flex gap-2 items-center">
-          {word.sourceUrls[0]} <NewWindowIcon />{" "}
+          {word.sourceUrls.length === 1 ? word.sourceUrls : word.sourceUrls[0]} <NewWindowIcon />{" "}
         </span>
       </div>
     </section>
