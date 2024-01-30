@@ -23,7 +23,7 @@ export const InputSearch = ({setWord}) => {
           type="text"
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
-          className=" h-12 pl-4 rounded-2xl w-full"
+          className=" h-12 md:text-xl lg:text-2xl pl-4 rounded-2xl w-full"
           placeholder="keyboard"
         />
         <button  className="absolute right-3"><SearchIcon/></button>

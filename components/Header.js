@@ -35,7 +35,7 @@ const Header = () => {
           <Dropdown >
             <DropdownTrigger>
               <Button className="bg-transparent  border-r-1 border-white  rounded-none">
-                <span className="text-right text-[14px] font-bold mr-[10px]" id="type">{type}</span>{" "}
+                <span className="text-right md:text-xl lg:text-2xl text-[14px] font-bold mr-[10px]" id="type">{type}</span>{" "}
                <ArrowDownIcon/>
               </Button>
             </DropdownTrigger>
@@ -51,7 +51,7 @@ const Header = () => {
             size="sm"
             color="primary"
 
-            className=" shrink-0  mx-3 "
+            className=" shrink-0  mx-3  "
             defaultSelected
             aria-label="Dark Mode"
           />

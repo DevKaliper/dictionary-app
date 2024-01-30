@@ -21,8 +21,8 @@ const Content = ({word}) => {
         <div
           id="word-textAndSound "
           className="flex flex-col gap-2">
-          <h1 className="text-3xl font-bold">{word.word}</h1>
-          <span className="text-secondary">{word.phonetic}</span>
+          <h1 className="text-3xl md:text-5xl font-bold">{word.word}</h1>
+          <span className="text-secondary md:text-xl lg:text-2xl">{word.phonetic}</span>
         </div>
         <div id="word-audioIcon">
           <PlayIcon />
@@ -32,21 +32,22 @@ const Content = ({word}) => {
       {word.meanings?.map((m, i) => (
         <section key={i}>
           <div className="flex my-5 justify-between gap-4 items-center ">
-            <span className="italic font-bold">{m.partOfSpeech}</span>
+            <span className="italic
+            md:text-lg lg:text-2xl font-bold">{m.partOfSpeech}</span>
             <Divider />
           </div>
 
           <div clas="meaning">
-            <span className="text-[#757575]">Meaning</span>
+            <span className="text-[#757575] md:text-lg lg:text-2xl ">Meaning</span>
             <div className="meanings my-4">
               {m.definitions?.slice(0, 3).map((d, i) => (
                 <div key={i}>
                   <div className="flex  gap-4 justify-start items-start  w-full mb-3 ">
                     <Viñeta />
-                    <div>{d.definition}</div>
+                    <div className="md:text-xl lg:text-2xl">{d.definition}</div>
                   </div>
                   {d.example && (
-                    <span className="ml-4 mb-4 inline-block italic">
+                    <span className="ml-4 md:text-lg lg:text-2xl mb-4 inline-block italic">
                       Example: {d.example}
                     </span>
                   )}
@@ -55,11 +56,11 @@ const Content = ({word}) => {
             </div>
             {m.synonyms.length != 0 && (
               <div className="flex w-full my-3 gap-x-6 flex-wrap">
-                <span className="text-[#757575]">Synonyms</span>
+                <span className="text-[#757575] md:text-lg lg:text-2xl">Synonyms</span>
                 {m.synonyms.slice(0, 3).map((s, i) => (
                   <span
                     key={i}
-                    className="text-secondary font-bold">
+                    className="text-secondary md:text-lg lg:text-2xl font-bold">
                     {s}
                   </span>
                 ))}
@@ -67,11 +68,11 @@ const Content = ({word}) => {
             )}
             {m.antonyms.length != 0 && (
               <div className="flex w-full  my-3 gap-x-6 flex-wrap">
-                <span className="text-[#757575]">Antonyms</span>
+                <span className="text-[#757575] md:text-lg lg:text-2xl">Antonyms</span>
                 {m.antonyms.map((a, i) => (
                   <span
                     key={i}
-                    className="text-secondary font-bold">
+                    className="text-secondary md:text-lg lg:text-2xl font-bold">
                     {a}
                   </span>
                 ))}
@@ -84,10 +85,10 @@ const Content = ({word}) => {
       <Divider />
 
       <div className="my-6 flex flex-col gap-1">
-        <span className="text-[#757575] underline text-sm inline-block">
+        <span className="text-[#757575] md:text-lg lg:text-2xl underline text-sm inline-block">
           Source
         </span>
-        <span className=" flex gap-2 items-center">
+        <span className=" flex gap-2 items-center md:text-lg lg:text-2xl">
           {word.sourceUrls.length === 1 ? word.sourceUrls : word.sourceUrls[0]} <NewWindowIcon />{" "}
         </span>
       </div>
