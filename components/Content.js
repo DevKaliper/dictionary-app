@@ -11,10 +11,14 @@ const Divider = () => (
   <div className="border-t-1 my-4 w-full border-[#3A3A3A]"></div>
 );
 
-const Content = ({word}) => {
+const Content = ({word}) => { 
+
+  if (!word) return <h1 className="text-3xl md:text-5xl font-bold my-5">No Definitions Found</h1>
 
   return (
     <section className="my-7">
+
+     
       <div
         id="word-container"
         className="flex justify-between items-center ">
