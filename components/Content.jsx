@@ -2,6 +2,7 @@
 "use client"
 
 import { NewWindowIcon, PlayIcon } from "./Icons";
+import { playAudio } from "@/services/services";
 
 const Viñeta = () => (
   <div className="bg-secondary  min-h-1 min-w-1 redondo relative top-2"> </div>
@@ -28,9 +29,9 @@ const Content = ({word}) => {
           <h1 className="text-3xl md:text-5xl font-bold">{word.word}</h1>
           <span className="text-secondary md:text-xl lg:text-2xl">{word.phonetic}</span>
         </div>
-        <div id="word-audioIcon">
+        <button id="word-audioIcon" onClick={() => playAudio(word.phonetics.map(e => e.audio).filter(e => e)[0])}>
           <PlayIcon />
-        </div>
+        </button>
       </div>
 
       {word.meanings?.map((m, i) => (
