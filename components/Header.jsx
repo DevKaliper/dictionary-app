@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import { Switch} from "@nextui-org/react";
+
 import {
   Dropdown,
   DropdownTrigger,
@@ -11,23 +10,8 @@ import {
 import { ArrowDownIcon, LogoIcon, MoonIcon } from "./Icons";
 import { SwitchTheme } from "./SwitchTheme";
 
-const Header = () => {
-  const [type, setType] = useState("Sans Serif");
+const Header = ({type, types, setType}) => {
 
-  const types = [
-    {
-      key: "Inter",
-      label: "Sans Serif",
-    },
-    {
-      key: "Lora",
-      label: "Serif",
-    },
-    {
-      key: "Inconsolata",
-      label: "Mono",
-    },
-  ];
   return (
     <>
       <header className="flex w-full h-full items-center justify-between ">
