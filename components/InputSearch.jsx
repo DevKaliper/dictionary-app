@@ -23,8 +23,8 @@ export const InputSearch = ({setWord}) => {
           type="text"
           value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
-          className=" h-12 md:text-xl lg:text-2xl pl-4 rounded-2xl w-full"
-          placeholder="keyboard"
+          className=" h-12 md:text-xl lg:text-2xl pl-4 rounded-2xl w-full border-4 border-secondary-300 dark:border-none"
+          placeholder="dog"
         />
         <button  className="absolute right-3"><SearchIcon/></button>
       </form>

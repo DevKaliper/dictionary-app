@@ -8,6 +8,7 @@ import { InputSearch } from "@/components/InputSearch";
 import {  useState } from "react";
 import Header from "@/components/Header"
 import  {test}  from "@/Mock/keyboard";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ['latin'] })
 const lora = Lora({ subsets: ['latin'] })
@@ -40,6 +41,7 @@ const Home = () => {
       <Header type={type} types={types} setType={setType}/>
           <InputSearch setWord={setWord} />
           <Content word={word[0]} />
+          <Footer/>
        
       </main>
     </>
