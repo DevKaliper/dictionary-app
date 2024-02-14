@@ -9,6 +9,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { ArrowDownIcon, LogoIcon, MoonIcon } from "./Icons";
+import { SwitchTheme } from "./SwitchTheme";
 
 const Header = () => {
   const [type, setType] = useState("Sans Serif");
@@ -47,14 +48,7 @@ const Header = () => {
               )}
             </DropdownMenu>
           </Dropdown>
-          <Switch
-            size="sm"
-            color="primary"
-
-            className=" shrink-0  mx-3  "
-            defaultSelected
-            aria-label="Dark Mode"
-          />
+          <SwitchTheme/>
           <MoonIcon/>
         </div>
       </header>
